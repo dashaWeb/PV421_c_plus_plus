@@ -94,8 +94,9 @@ int main()
 			}cout << endl;*/
 
 	srand(time(0));
+	int number = 12;
 	int	min = -5, max = 5;
-	for (size_t i = 0; i < 10; i++)
+	for (size_t i = 0; i < number; i++)
 	{
 		cout << min + rand() % (max - min + 1) << endl;
 	}
