@@ -116,4 +116,55 @@ int main()
 		cout << endl;
 	}
 
+	cout << "\n\n\n";
+	const int size = 5, size2 = 10;
+	int one[size]{}, two[size]{}, res[size2]{};
+
+	int min = -10, max = 10;
+	for (size_t i = 0; i < size; i++)
+	{
+		one[i] = rand() % (max - min + 1) + min;
+		two[i] = rand() % (max - min + 1) + min;
+	}
+	cout << "First array  :: ";
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << one[i] << "\t";
+	}cout << endl;
+
+	cout << "Second array :: ";
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << two[i] << "\t";
+	}cout << endl;
+
+	int j = 0;
+	for (size_t i = 0; i < size; i++)
+	{
+		if (one[i] > 0)
+			res[j++] = one[i];
+		if (two[i] > 0)
+			res[j++] = two[i];
+	}
+
+	for (size_t i = 0; i < size; i++)
+	{
+		if (one[i] == 0)
+			res[j++] = one[i];
+		if (two[i] == 0)
+			res[j++] = two[i];
+	}
+
+	for (size_t i = 0; i < size; i++)
+	{
+		if (one[i] < 0)
+			res[j++] = one[i];
+		if (two[i] < 0)
+			res[j++] = two[i];
+	}
+	cout << "Result array :: ";
+	for (size_t i = 0; i < j; i++)
+	{
+		cout << res[i] << "\t";
+	}cout << endl;
 }
