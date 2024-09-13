@@ -96,4 +96,15 @@ int main()
 		cout << arr5[i] << "\t";
 	}
 	cout << endl;
+
+
+	int arr6[6]{};
+	for (size_t i = 0; i < 6; i++)
+	{
+		cin >> arr6[i];
+	}
+
+	string months[12]{" ", " ", " "};
+	double profite[12];
+
 }
