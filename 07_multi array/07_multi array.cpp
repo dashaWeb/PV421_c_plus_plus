@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+	srand(time(0));
 	const int row = 4, col = 4;
 	int arr[row][col]{};
 
@@ -60,6 +61,33 @@ int main()
 		}
 
 		cout << "\n\n";
+	}
+
+	cout << "\n\n ============================== Task 3 ====================================\n\n";
+	{
+		const int row = 5, col = 10;
+		int arr[row][col]{};
+		int res[row][row]{};
+		for (size_t i = 0; i < row; i++)
+		{
+			for (size_t j = 0; j < col; j++)
+			{
+				arr[i][j] = rand() % 50;
+				cout << arr[i][j]<< "\t";
+			}
+			cout << endl;
+		}
+
+		cout << endl;
+		for (size_t i = 0; i < row; i++)
+		{
+			for (size_t j = 0; j < row; j++)
+			{
+				res[i][j] = arr[i][j * 2] + arr[i][j * 2 + 1];
+				cout << res[i][j] << "\t";
+			}cout << endl;
+		}
+
 	}
 
 }
