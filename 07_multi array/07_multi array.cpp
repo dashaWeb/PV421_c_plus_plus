@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 int main()
 {
@@ -90,5 +90,31 @@ int main()
 
 	}
 
+
+	{
+	
+		cout << ":::::::::::::::::::::::::::::::::::::::::::::task2\n";
+		int SUM = 0;
+		for (size_t i = 0; i < row; i++)
+		{
+			for (size_t j = 0; j < col; j++)
+			{
+				SUM += arr[i][j];
+				cout << arr[i][j] << "\t";
+			}
+			cout << "|" << SUM << endl;
+		}
+		for (size_t j = 0; j < row; j++)
+		{
+			for (size_t i = 0; i < col; i++)
+			{
+				SUM += arr[i][j];
+				cout << SUM;
+			}
+		}
+
+		cout << ":::::::::::::::::::::::::::::::::::::::::::::task2\n";
+
+	}
 }
 
