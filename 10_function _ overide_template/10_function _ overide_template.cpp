@@ -76,6 +76,33 @@ void fillArray(T arr[], size_t length, int min = 1, int max = 10, bool div = fal
 		}
 	}
 }
+template <typename T, int COL = 5>
+void fillArray(T arr[][COL], size_t row, size_t col, int min = 1, int max = 10, bool div = false)
+{
+	for (size_t j = 0; j < row; j++)
+	{
+		for (size_t i = 0; i < col; i++)
+		{
+			arr[j][i] = min + rand() % (max - min + 1);
+			if (div)
+			{
+				arr[j][i] /= 3.0;
+			}
+		}
+	}	
+}
+template <typename T, int COL = 5>
+void printArray(T arr[][COL], size_t row, size_t col, string prompt = "")
+{
+	cout << prompt << endl;
+	for (size_t j = 0; j < row; j++)
+	{
+		for (size_t i = 0; i < col; i++)
+		{
+			cout << arr[j][i] << "\t";
+		}cout << endl;
+	}
+}
 template <typename T>
 void printArray(T arr[], size_t length, string prompt = "")
 {
@@ -150,6 +177,10 @@ int main()
 	}
 	cout << "find X  --> position :: " << indexOf(arr_c, size, 'X') << endl;
 
-	
+	cout << "\n\n ============================ Multi Array ===============================\n";
+	const int row = 4, col = 7;
+	int mas[row][col]{};
+	fillArray(mas, row, col, 1, 10,false);
+	printArray(mas, row, col, "Print Multi Array :: ");
 }
 
