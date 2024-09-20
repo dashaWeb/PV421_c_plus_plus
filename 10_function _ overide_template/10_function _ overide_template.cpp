@@ -147,6 +147,45 @@ int indexOf(T arr[], size_t length, T key, int start = 0)
 	}
 	return -1;
 }
+
+
+void min_max(int arr[], size_t length)
+{
+	int min = arr[0];
+	int max = arr[0];
+	int min_i = 0, max_i = 0;
+	for (size_t i = 1; i < length; i++)
+	{
+		if (min > arr[i]) {
+			min = arr[i];
+			min_i = i;
+		}
+		if (max < arr[i])
+		{
+			max = arr[i];
+			max_i = i;
+		}
+	}
+	//cout << "Min" << min ...
+}
+int min_(int arr[], size_t length)
+{
+	int min = arr[0];
+
+	int min_i = 0;
+	for (size_t i = 1; i < length; i++)
+	{
+		if (min > arr[i]) {
+			min = arr[i];
+		}
+
+	}
+	return min;
+
+}
+void fin(int arr[], size_t length) {
+	cout << min_(arr, length) << endl;
+}
 int main()
 {
 	cout << "Sum int    --> " << sum(5, 3) << endl;
