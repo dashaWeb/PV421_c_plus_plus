@@ -186,6 +186,35 @@ int min_(int arr[], size_t length)
 void fin(int arr[], size_t length) {
 	cout << min_(arr, length) << endl;
 }
+
+void shuffle(int arr[], size_t length, size_t number = 3)
+{
+	for (size_t i = 0; i < number; i++)
+	{
+		size_t one = rand() % length;
+		size_t two = rand() % length;
+
+		int temp = arr[one];
+		arr[one] = arr[two];
+		arr[two] = temp;
+	}
+}
+
+char toLower(char s)
+{
+	if (s >= 'A' and s <= 'Z')
+		return s + 32;
+	return s;
+}
+int indexFirst(char arr[], size_t length, char key)
+{
+	for (size_t i = 0; i < length; i++)
+	{
+		if (toLower(arr[i]) == toLower(key))
+			return i;
+	}
+	return -1;
+}
 int main()
 {
 	cout << "Sum int    --> " << sum(5, 3) << endl;
@@ -221,5 +250,15 @@ int main()
 	int mas[row][col]{};
 	fillArray(mas, row, col, 1, 10,false);
 	printArray(mas, row, col, "Print Multi Array :: ");
+
+	cout << "\n\n ============================ Shuffle Array ===============================\n";
+	printArray(arr, size);
+	shuffle(arr, size, 5);
+	printArray(arr, size);
+	cout << "\n\n ============================ Find Array ===============================\n";
+	printArray(arr_c, size);
+	cout << indexFirst(arr_c, size, 'a') << endl;
+	cout << indexFirst(arr_c, size, 'x') << endl;
+
 }
 
