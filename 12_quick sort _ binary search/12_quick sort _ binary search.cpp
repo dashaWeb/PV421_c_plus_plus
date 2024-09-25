@@ -89,10 +89,10 @@ int main()
 	const int size = 10;
 	int arr[size]{};
 	uniqValue(arr, size);
-	cout << binarySearch(arr, 0, size - 1, 4) << endl;
 	printArray(arr, size, "Print Unique array ");
 	quickSort(arr, 0, size - 1);
 	printArray(arr, size, "Print Sorted array ");
+	cout << binarySearch(arr, 0, size - 1, 4) << endl;
 	cout << binarySearch(arr, 0, size - 1, 44) << endl;
 }
 
