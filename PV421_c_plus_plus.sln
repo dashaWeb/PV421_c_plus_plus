@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12_quick sort _ binary sear
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_pointers", "13_pointers\13_pointers.vcxproj", "{94D60A71-032E-47B0-81C0-CF12DFD43DDF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_reference_dymanic array", "14_reference_dymanic array\14_reference_dymanic array.vcxproj", "{285F201F-FA40-4A3D-BDE9-D8BD73A98869}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{94D60A71-032E-47B0-81C0-CF12DFD43DDF}.Release|x64.Build.0 = Release|x64
 		{94D60A71-032E-47B0-81C0-CF12DFD43DDF}.Release|x86.ActiveCfg = Release|Win32
 		{94D60A71-032E-47B0-81C0-CF12DFD43DDF}.Release|x86.Build.0 = Release|Win32
+		{285F201F-FA40-4A3D-BDE9-D8BD73A98869}.Debug|x64.ActiveCfg = Debug|x64
+		{285F201F-FA40-4A3D-BDE9-D8BD73A98869}.Debug|x64.Build.0 = Debug|x64
+		{285F201F-FA40-4A3D-BDE9-D8BD73A98869}.Debug|x86.ActiveCfg = Debug|Win32
+		{285F201F-FA40-4A3D-BDE9-D8BD73A98869}.Debug|x86.Build.0 = Debug|Win32
+		{285F201F-FA40-4A3D-BDE9-D8BD73A98869}.Release|x64.ActiveCfg = Release|x64
+		{285F201F-FA40-4A3D-BDE9-D8BD73A98869}.Release|x64.Build.0 = Release|x64
+		{285F201F-FA40-4A3D-BDE9-D8BD73A98869}.Release|x86.ActiveCfg = Release|Win32
+		{285F201F-FA40-4A3D-BDE9-D8BD73A98869}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
