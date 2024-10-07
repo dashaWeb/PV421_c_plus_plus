@@ -94,6 +94,19 @@ void remove(T*& arr, size_t& length, const size_t& index)
     delete[] arr;
     arr = tmp;
 }
+template <typename T>
+void popFront(T*& arr, size_t& length, const size_t& index)
+{
+    //remove(arr, length, 0);
+    T* tmp = new T[--length];
+    for (size_t i = 0; i < length; i++)
+    {
+        tmp[i] = arr[i + 1];
+    }
+    delete[] arr;
+    arr = tmp;
+}
+
 int main()
 {
     int a = 5, b = 10;
@@ -118,7 +131,7 @@ int main()
     insert(arr, size, 33, 3);
     print(arr, size, "Print insert");
 
-    remove(arr, size, 44);
+    remove(arr, size, 4);
     print(arr, size, "Print remove");
 
     /*delete [] arr;
