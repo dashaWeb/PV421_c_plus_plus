@@ -23,3 +23,5 @@ void editBook(Book& book);
 char* toLoweCase(const char* line);
 int findByAuthor(const Book* library, const int& size, const char* author, int start = 0);
 void sortByTitle(Book* library, const int& size);
+void remove_(Book*& arr, size_t& length, const size_t& index);
+void pushBack(Book*& arr, size_t& length, Book value);

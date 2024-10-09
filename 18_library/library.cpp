@@ -60,3 +60,35 @@ void sortByTitle(Book* library, const int& size)
 		}
 	}
 }
+
+
+void remove_(Book*& arr, size_t& length, const size_t& index)
+{
+	if (index >= length) {
+		cout << "Error! out range" << endl;
+		return;
+	}
+	Book* tmp = new Book[--length];
+	for (size_t i = 0; i < length; i++)
+	{
+		if (i < index)
+			tmp[i] = arr[i];
+		else
+			tmp[i] = arr[i + 1];
+	}
+	delete[] arr;
+	arr = tmp;
+}
+
+void pushBack(Book*& arr, size_t& length, Book value)
+{
+	Book* tmp = new Book[length + 1];
+	for (size_t i = 0; i < length; i++)
+	{
+		tmp[i] = arr[i];
+	}
+	tmp[length] = value;
+	length++;
+	delete[] arr;
+	arr = tmp;
+}

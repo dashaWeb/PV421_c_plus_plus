@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	int size = 10;
+	size_t size = 10;
 	Book* library = new Book[size]{
 	   {"Iron Flame","Rebecca Yarros","Entangled: Red Tower Books","Fantasy"},
 	   {"The Ever King","LJ Andrews","Victorious","Fantasy"},
@@ -42,4 +42,24 @@ int main()
 	cout << "Test sorted by title" << endl;
 	sortByTitle(library, size);
 	printBooks(library,size);
+
+
+	cout << "\n\nTest print books \n";
+	printBooks(library, size);
+
+	//res_index = findByAuthor(library, size, "J.K. Rowling");
+	//while (res_index != -1)
+	//{
+	//	remove_(library, size, res_index);
+	//	printBooks(library, size);
+	//	res_index = findByAuthor(library, size, "J.K. Rowling", res_index);
+	//	//system("pause");
+	//}
+
+
+	cout << "\n\nTest add books \n";
+	Book book;
+	editBook(book);
+	pushBack(library, size, book);
+	printBooks(library, size);
 }
