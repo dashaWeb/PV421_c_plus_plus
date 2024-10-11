@@ -11,7 +11,7 @@ int main()
 {
 	string line = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 	string fname = "my.txt";
-
+	cout << line.size() << endl;
 	ofstream file;
 
 	//file.open(fname, ios_base::app); // mode --> write (w); write and append (wa)
