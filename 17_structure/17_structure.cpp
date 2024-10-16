@@ -50,10 +50,43 @@ void editStudent(Student& student)
 	cout << "Enter surname --> "; cin >> student.surname;
 	cout << "Enter date --> "; cin >> student.birthdate.day >> student.birthdate.month >> student.birthdate.year;
 }
+struct Point
+{
+	int x, y;
+};
+struct Rectangle
+{
+	Point upLeft;
+	Point bottomRight;
+	void print()
+	{
+		cout << "A(" << upLeft.x << "," << upLeft.y << ")\t" << "A(" << bottomRight.x << "," << bottomRight.y << ")" << endl;
+	}
+	int getWidth()
+	{
+		return bottomRight.x - upLeft.x;
+	}
+	int getHeight()
+	{
+		return upLeft.y - bottomRight.y;
+	}
+	int Square()
+	{
+		return getWidth() * getHeight();
+	}
+	void resizeWidth(int resize)
+	{
+		bottomRight.x += resize;
+	}
+};
 int main()
 {
 
-	Student ivan;
+	Rectangle rect = { {0,20} ,{30,0} };
+	rect.print();
+	cout << "Width :: " << rect.getWidth() << endl;
+
+	/*Student ivan;
 	ivan.name = "Ivan";
 	ivan.surname = "Golovatenko";
 	ivan.birthdate.day = 02;
@@ -82,7 +115,7 @@ int main()
 
 	Student* sasha = new Student;
 	editStudent(sasha);
-	printStudent(sasha);
+	printStudent(sasha);*/
 	/*string firstName = "Pasha";
 	string lastName = "Polishuk";
 	string fatherName = "None";
