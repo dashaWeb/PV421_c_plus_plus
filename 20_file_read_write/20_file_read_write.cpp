@@ -22,6 +22,8 @@ struct Book
 //};
 int main()
 {
+
+
 	size_t size = 3;
 	Book book = { "Harry Potter and the Chamber of Secrets","J.K. rowling","Pottermore Publishing","Children's Fantasy" };
 	/*Book* library = new Book[size]{

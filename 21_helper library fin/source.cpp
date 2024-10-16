@@ -89,3 +89,23 @@ Source* read(int& size, string fname)
 	return tmp;
 }
 
+void clear(Source*& sources, int& size)
+{
+	if (sources != nullptr)
+	{
+		delete[] sources;
+		sources = nullptr;
+		size = 0;
+	}
+}
+
+void remove_(Source* sources, const size_t& size, const int& id, string fname)
+{
+	remove(fname.c_str());
+	for (size_t i = 0; i < size-1; i++)
+	{
+		i < (id-1) ? save(sources[i]) : save(sources[i + 1]);
+	}
+}
+
+

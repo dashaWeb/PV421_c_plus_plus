@@ -4,9 +4,9 @@ using namespace std;
 
 int main()
 {
-	
+
 	int choice;
-	
+
 
 	Source* sources = nullptr;
 	int size = 0;
@@ -21,21 +21,37 @@ int main()
 			fillDB();
 			break;
 		case 2:
+			clear(sources, size);
 			sources = read(size);
 			if (sources == nullptr) {
 				continue;
 			}
-			printAll(sources, size,true);
+			printAll(sources, size);
 			break;
-		case 3:
+		case 3: {
 			Source tmp;
 			editSource(tmp);
 			save(tmp);
 			break;
 		}
+		case 4: {
+			clear(sources, size);
+			sources = read(size);
+			if (sources == nullptr) {
+				continue;
+			}
+			printAll(sources, size, true);
+			int id;
+			cout << "Enter #id :: ";
+			cin >> id;
+
+			remove_(sources, size, id);
+			break; 
+		}
+		}
 		if (choice == 0)
 			break;
 	}
-	
+
 
 }
